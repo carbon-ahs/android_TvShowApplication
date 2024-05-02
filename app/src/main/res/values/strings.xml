@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TvShowApplication</string>
+    <string name="appbar_text">TV Shows | Most Popular</string>
 </resources>
