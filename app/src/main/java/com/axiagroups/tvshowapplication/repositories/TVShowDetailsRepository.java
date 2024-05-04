@@ -1,5 +1,6 @@
 package com.axiagroups.tvshowapplication.repositories;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
@@ -26,12 +27,12 @@ public class TVShowDetailsRepository {
 
         apiService.getTVShowDetails(tvShowId).enqueue(new Callback<TVShowDetailsResponse>() {
             @Override
-            public void onResponse(Call<TVShowDetailsResponse> call, Response<TVShowDetailsResponse> response) {
+            public void onResponse(@NonNull Call<TVShowDetailsResponse> call,@NonNull Response<TVShowDetailsResponse> response) {
                 data.setValue(response.body());
             }
 
             @Override
-            public void onFailure(Call<TVShowDetailsResponse> call, Throwable t) {
+            public void onFailure(@NonNull Call<TVShowDetailsResponse> call,@NonNull Throwable t) {
                 data.setValue(null);
             }
 

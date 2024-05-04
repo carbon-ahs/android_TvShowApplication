@@ -13,7 +13,7 @@ public class TVShowDetails {
     @SerializedName("runtime")
     private String runtime;
     @SerializedName("image_path")
-    private String image_path;
+    private String imagePath;
     @SerializedName("rating")
     private String rating;
     @SerializedName("genres")
@@ -36,8 +36,8 @@ public class TVShowDetails {
         return runtime;
     }
 
-    public String getImage_path() {
-        return image_path;
+    public String getImagePath() {
+        return imagePath;
     }
 
     public String getRating() {
