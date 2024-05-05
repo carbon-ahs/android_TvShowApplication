@@ -3,4 +3,8 @@
     <string name="appbar_text">TV Shows | Most Popular</string>
     <string name="read_more">Read More</string>
     <string name="read_less">Read Less</string>
+    <string name="star">star</string>
+    <string name="u2022">•</string>
+    <string name="website">Website</string>
+    <string name="episodes">Episodes</string>
 </resources>
