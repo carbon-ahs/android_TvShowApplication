@@ -9,5 +9,3 @@ Pagination: https://youtu.be/Pe0sq-hu-P4?si=YvJlaIoS6aiZk2km&t=19
 
 TV show Details: https://youtu.be/rEOVNid8_Nc?si=HyFEWltzT2P7apr5&t=578
 TV show Details, Show Image Slider & Slider indicator: https://www.youtube.com/watch?v=6TIByFLkI-8
-https://youtu.be/vEiC0YgP-xA?si=iUKAnkQEU56hFMZ4&t=1398
-https://youtu.be/EfAcki-5ti0?si=gsONND2bg2QralEf&t=768

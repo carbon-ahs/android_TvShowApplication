@@ -19,6 +19,7 @@ import com.axiagroups.tvshowapplication.databinding.ActivityTvshowDetailsBinding
 import com.axiagroups.tvshowapplication.databinding.ActivityWatchListBinding;
 import com.axiagroups.tvshowapplication.listeners.WatchlistListener;
 import com.axiagroups.tvshowapplication.models.TVShow;
+import com.axiagroups.tvshowapplication.utilities.TempDataHolder;
 import com.axiagroups.tvshowapplication.viewModels.WatchlistViewModel;
 
 import java.util.ArrayList;
@@ -54,6 +55,7 @@ public class WatchListActivity extends AppCompatActivity implements WatchlistLis
         viewModel = new ViewModelProvider(this).get(WatchlistViewModel.class);
         activityWatchListBinding.imageBack.setOnClickListener(view -> onBackPressed());
         watchlist = new ArrayList<>();
+        loadWatchlist();
     }
 
     private void loadWatchlist() {
@@ -79,7 +81,11 @@ public class WatchListActivity extends AppCompatActivity implements WatchlistLis
     @Override
     protected void onResume() {
         super.onResume();
-        loadWatchlist();
+        if (TempDataHolder.IS_WATCHLIST_UPDATED) {
+            loadWatchlist();
+            TempDataHolder.IS_WATCHLIST_UPDATED = false;
+        }
+
     }
 
     @Override

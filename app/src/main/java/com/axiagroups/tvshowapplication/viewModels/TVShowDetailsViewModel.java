@@ -13,6 +13,7 @@ import com.axiagroups.tvshowapplication.repositories.TVShowDetailsRepository;
 import com.axiagroups.tvshowapplication.responses.TVShowDetailsResponse;
 
 import io.reactivex.Completable;
+import io.reactivex.Flowable;
 
 /**
  * Created by Ahsan Habib on 5/4/2024.
@@ -35,6 +36,14 @@ public class TVShowDetailsViewModel extends AndroidViewModel {
 
     public Completable addToWatchlist(TVShow tvShow) {
         return tvShowDatabase.tvShowDao().addToWatchlist(tvShow);
+    }
+
+    public Flowable<TVShow> getTVShowFromWatchList(String tvShowID) {
+        return tvShowDatabase.tvShowDao().getTVShowFromWatchlist(tvShowID);
+    }
+
+    public Completable removeTVShowFromWatchlist(TVShow tvShow) {
+        return tvShowDatabase.tvShowDao().removeFromWatchlist(tvShow);
     }
 
 }
